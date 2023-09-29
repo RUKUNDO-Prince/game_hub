@@ -14,10 +14,14 @@ interface Props {
 const PlatformIconList = ({ platforms }: Props) => {
     const iconMap: { [key: string]: IconType } = {
         pc: FaWindows,
-        playstation: FaPlaystation,
-        xbox: FaXbox,
+        playstation5: FaPlaystation,
+        playstation4: FaPlaystation,
+        playstation3: FaPlaystation,
+        xbox360: FaXbox,
+        "xbox-series-x": FaXbox,
+        "xbox-one": FaXbox,
         nintendo: SiNintendo,
-        mac: FaApple,
+        macos: FaApple,
         linux: FaLinux,
         ios: MdPhoneIphone,
         web: BsGlobe,
