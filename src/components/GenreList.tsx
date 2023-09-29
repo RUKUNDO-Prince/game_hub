@@ -6,9 +6,10 @@ import { link } from "fs";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-const GenreList = ({ onSelectGenre }: Props) => {
+const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data, isLoading, error } = useData<Genre>("/genres");
 
   if (error) return null;
@@ -23,7 +24,7 @@ const GenreList = ({ onSelectGenre }: Props) => {
               borderRadius={8}
               src={getCroppedImageUrl(genre.image_background)}
             />
-            <Button _focus={{ color: "#999" }} variant="link" onClick={() => onSelectGenre(genre)} fontSize='lg'>{genre.name}</Button>
+            <Button fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"} _focus={{ color: "#999" }} variant="link" onClick={() => onSelectGenre(genre)} fontSize='lg'>{genre.name}</Button>
           </HStack>
         </ListItem>
       ))}
