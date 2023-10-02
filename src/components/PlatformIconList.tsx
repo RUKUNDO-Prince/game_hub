@@ -17,6 +17,7 @@ const PlatformIconList = ({ platforms }: Props) => {
         playstation5: FaPlaystation,
         playstation4: FaPlaystation,
         playstation3: FaPlaystation,
+        "ps-vita": FaPlaystation,
         xbox360: FaXbox,
         "xbox-series-x": FaXbox,
         "xbox-one": FaXbox,
