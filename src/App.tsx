@@ -39,13 +39,13 @@ const App = () => {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Flex paddingLeft={3} marginBottom={5}>
+        <GameHeading gameQuery={gameQuery} />
+        <Flex paddingLeft={3} marginTop={5}>
           <Box marginRight={5}>
             <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({ ...gameQuery, platform })} />
           </Box>
           <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({ ...gameQuery, sortOrder })} />  
         </Flex>
-        <GameHeading gameQuery={gameQuery} />
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
