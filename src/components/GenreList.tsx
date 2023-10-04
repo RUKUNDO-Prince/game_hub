@@ -2,7 +2,6 @@ import useGenres, { Genre } from "../hooks/useGenres";
 import useData from "../hooks/useData";
 import { Button, HStack, Heading, Image, List, ListItem, Spinner, Text } from "@chakra-ui/react";
 import getCroppedImageUrl from "../services/image-url";
-import { link } from "fs";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
